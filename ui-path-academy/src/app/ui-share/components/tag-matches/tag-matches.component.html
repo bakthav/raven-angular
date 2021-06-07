@@ -1,0 +1,69 @@
+<div class="wrapper container my-5 mb-5">
+    <div class="row">
+        <div class="col-12">
+            <h1 class="page-title-lg fw-bold mb-4">Welcome to UiShare</h1>
+            <div class="row">
+                <div class="col-sm-6">
+                    <h4 class="mb-3 fw-bold">Tag Matches Your Intrests</h4>
+                </div>                
+            </div>        
+            <div class="row">
+              <div class="col-sm-3">
+                  <h5 class="mb-3">Category</h5>                  
+                  <div class="content-height">
+                      <ul class="category-sec">
+                          <li><a href="javascript:;" class="active">RPA Starter (5)</a></li>
+                          <li><a href="javascript:;">Product Training (183)</a></li>
+                          <li><a href="javascript:;">New Releases (18)</a></li>
+                          <li><a href="javascript:;">Community Tutorials (10)</a></li>
+                      </ul>
+                  </div>
+              </div>
+                <div class="col-sm-9">
+                    <div class="row">
+                        <div class="col-sm-5">
+                            <h5 class="mb-3">Tags</h5>
+                            <div class="mb-3 col-10 px-0">
+                                <ng-select [items]="cars" class="rs-select rs-searchable" bindLabel="name" placeholder="Search">
+                                </ng-select>
+                            </div>
+                            <div class="content-height">
+                              <div class="rs-checkbox custom-control custom-checkbox mb-2" *ngFor="let t of topics; let i = index">
+                                <label class=" custom-control-label" for="{{i+1}}">
+                                    {{t.name}} ({{t.count}})
+                                    <input class="custom-control-input" type="checkbox" id="{{i+1}}">
+                                    <span class="rs-checkmark"></span>
+                                </label>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-5">
+                            <h5 class="mb-3">Your Selected Tags</h5>
+                            <div class="mb-3 col-10 px-0">
+                                <ng-select [items]="cars" class="rs-select rs-searchable" bindLabel="name" placeholder="Search">
+                                </ng-select>
+                            </div>
+                            <div class="content-height">
+                              <div class="rs-checkbox custom-control custom-checkbox mb-2" *ngFor="let t of topics; let i = index">
+                                <label class=" custom-control-label" for="{{i+1}}">
+                                    {{t.name}} ({{t.count}})
+                                    <input class="custom-control-input" type="checkbox" id="{{i+1}}">
+                                    <span class="rs-checkmark"></span>
+                                </label>
+                            </div>
+                            </div>
+                        </div>                
+                    </div>
+                    
+                </div>
+            </div>
+        
+        </div>
+    </div>
+</div>
+<div class="col-12">
+    <div class="page-footer d-flex align-items-center justify-content-end">
+       <a href="javascript:;" class="rs-btn btn text-uppercase" routerLink="../preffered">Next</a>
+       <span class="fs-14 ml-3">2/3</span>
+    </div>
+</div>
